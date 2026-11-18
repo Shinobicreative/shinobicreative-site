@@ -1,0 +1,164 @@
+/* Shinobi Creative — static site stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --text: #121212;
+  --muted: #555;
+  --line: #e3e3e3;
+  --bg: #ffffff;
+  --accent: #121212;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Manuale", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "YuMincho", "Yu Mincho", "MS PMincho", serif;
+  font-size: 17px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { opacity: 0.65; }
+
+img { max-width: 100%; height: auto; }
+
+/* ---------- header ---------- */
+.site-header { border-bottom: 1px solid var(--line); }
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 24px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 28px;
+}
+.site-title {
+  font-size: 1.55rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+}
+.site-nav ul, .footer-nav ul, .footer-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+.site-nav a { text-decoration: none; font-size: 0.98rem; }
+.lang-switch { margin: 0 0 0 auto; font-size: 0.9rem; }
+.lang-switch a { text-decoration: none; border: 1px solid var(--line); padding: 2px 10px; border-radius: 999px; }
+
+/* ---------- main ---------- */
+.site-main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+.page-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 32px;
+  letter-spacing: 0.04em;
+}
+.page-content h2 { font-size: 1.45rem; margin: 1.8em 0 0.6em; }
+.page-content h3 { font-size: 1.2rem; margin: 1.6em 0 0.5em; }
+.page-content p { margin: 0.9em 0; }
+.page-content ul, .page-content ol { padding-left: 1.4em; }
+.page-content table { border-collapse: collapse; margin: 1em 0; }
+.page-content th, .page-content td { border: 1px solid var(--line); padding: 6px 12px; }
+.page-content blockquote { margin: 1em 0; padding-left: 1em; border-left: 3px solid var(--line); color: var(--muted); }
+.article-date { color: var(--muted); margin: -16px 0 24px; font-size: 0.95rem; }
+.article-hero img { width: 100%; }
+
+/* ---------- homepage ---------- */
+.motto {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  margin: 24px 0 40px;
+}
+.hero-media { text-align: center; margin-bottom: 56px; }
+.hero-media img { max-width: 640px; width: 100%; }
+.button {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  padding: 10px 34px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 18px;
+  background: transparent;
+}
+.button:hover { background: var(--accent); color: #fff; opacity: 1; }
+.home-news { margin-bottom: 56px; }
+.home-news h2 { font-size: 1.5rem; margin: 0 0 16px; }
+.news-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.news-list li { border-bottom: 1px solid var(--line); padding: 12px 4px; }
+.news-list a { text-decoration: none; }
+.home-news .more { text-align: right; }
+.home-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.home-cards .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.home-cards .card h2 { font-size: 1.35rem; margin: 14px 0 6px; }
+.home-cards .card p { margin: 4px 0; }
+
+/* ---------- blog index ---------- */
+.article-list { list-style: none; margin: 0; padding: 0; }
+.article-card {
+  border: 1px solid var(--line);
+  padding: 20px 22px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.article-card img { max-width: 320px; margin-bottom: 8px; }
+.article-card > a { font-size: 1.2rem; font-weight: 600; text-decoration: none; }
+.article-card-date { color: var(--muted); font-size: 0.9rem; }
+.article-card-excerpt { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+
+/* ---------- contact form replacement ---------- */
+.form-note {
+  border: 1px solid var(--line);
+  padding: 28px 24px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+/* ---------- footer ---------- */
+.site-footer { border-top: 1px solid var(--line); }
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 36px 24px 44px;
+  text-align: center;
+}
+.footer-name { font-size: 1.15rem; font-weight: 600; letter-spacing: 0.06em; margin: 0 0 14px; }
+.footer-nav ul, .footer-social { justify-content: center; }
+.footer-nav a, .footer-social a { text-decoration: none; font-size: 0.95rem; }
+.footer-social { margin-top: 12px; }
+.copyright { color: var(--muted); font-size: 0.88rem; margin: 20px 0 0; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .site-main { padding: 32px 18px 56px; }
+  .page-title { font-size: 1.6rem; }
+  .motto { font-size: 1.5rem; }
+  .home-cards { grid-template-columns: 1fr; }
+  .lang-switch { margin-left: 0; }
+  .header-inner { padding: 14px 18px 10px; }
+}
